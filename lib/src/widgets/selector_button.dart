@@ -181,10 +181,14 @@ class SelectorButton extends StatelessWidget {
                     ? selectorConfig.tabletPortraitWidthFactor
                     : selectorConfig.tabletLandscapeWidthFactor)
                 : 1.0;
+            final heightFactor = selectorConfig.isTablet &&
+                    orientation == Orientation.landscape
+                ? selectorConfig.tabletLandscapeHeightFactor
+                : selectorConfig.bottomSheetHeightFactor;
             return FractionallySizedBox(
               widthFactor: widthFactor,
               child: Container(
-                height: MediaQuery.of(context).size.height * 0.55,
+                height: MediaQuery.of(context).size.height * heightFactor,
                 decoration: BoxDecoration(
                   color: bottomSheetBgColor,
                   borderRadius: BorderRadius.only(

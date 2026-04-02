@@ -39,6 +39,8 @@ class SelectorConfig {
   final bool isTablet;
   final double tabletPortraitWidthFactor;
   final double tabletLandscapeWidthFactor;
+  final double bottomSheetHeightFactor;
+  final double tabletLandscapeHeightFactor;
 
   const SelectorConfig({
     this.selectorType = PhoneInputSelectorType.DROPDOWN,
@@ -52,5 +54,7 @@ class SelectorConfig {
     this.isTablet = false,
     this.tabletPortraitWidthFactor = 0.67,
     this.tabletLandscapeWidthFactor = 0.5,
+    this.bottomSheetHeightFactor = 0.55,
+    this.tabletLandscapeHeightFactor = 0.95,
   });
 }
